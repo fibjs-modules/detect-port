@@ -1,0 +1,35 @@
+{
+  "name": "@fibjs/detect-port",
+  "description": "JavaScript Implementation of Port Detector",
+  "version": "1.0.0",
+  "keywords": [
+    "Detector",
+    "Port",
+    "Port Detector",
+    "fibjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/detect-port.git"
+  },
+  "scripts": {
+    "ci": "fibjs test/index.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@fibjs/ci": "^1.0.0"
+  },
+  "ci": {
+    "type": "travis"
+  },
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/detect-port/issues"
+  },
+  "author": "ngot <zhuanghengfei@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/fibjs-modules/detect-port#readme",
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}

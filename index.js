@@ -1,0 +1,17 @@
+const net = require('net');
+const http = require("http");
+
+module.exports = function detectPort(port) {
+  let svr;
+  try {
+    svr = new http.Server(port, () => { });
+    svr.asyncRun();
+  } catch (error) {
+    svr = new http.Server(0, () => { });
+    svr.asyncRun();
+  } finally {
+    port = svr.socket.localPort;
+    svr.stop();
+    return port;
+  }
+};
