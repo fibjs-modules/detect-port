@@ -17,4 +17,4 @@ describe('detectPort', () => {
   });
 });
 
-test.run(console.DEBUG);
+process.exit(test.run(console.DEBUG));
