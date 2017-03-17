@@ -6,7 +6,7 @@ test.setup();
 
 describe('detectPort', () => {
   it("available port", () => {
-    assert.equal(detectPort(55202), 55202);
+    assert.equal(detectPort(41687), 41687);
   });
 
   it("random port", () => {
