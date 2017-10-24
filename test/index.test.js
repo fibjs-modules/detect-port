@@ -11,7 +11,7 @@ describe('detectPort', () => {
 
   it("random port", () => {
     let svr = new http.Server(3000, () => { });
-    svr.asyncRun();
+    svr.run(() => {});
     assert.notEqual(detectPort(3000), 3000);
     svr.stop();
   });

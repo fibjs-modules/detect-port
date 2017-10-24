@@ -5,10 +5,10 @@ module.exports = function detectPort(port) {
   let svr;
   try {
     svr = new http.Server(port, () => { });
-    svr.asyncRun();
+    svr.run(() => {});
   } catch (error) {
     svr = new http.Server(0, () => { });
-    svr.asyncRun();
+    svr.run(() => {});
   } finally {
     port = svr.socket.localPort;
     svr.stop();
