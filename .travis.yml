@@ -55,7 +55,7 @@ before_install:
       ruby -v;
       brew update;
       brew install xz;
-      OS=darwin
+      OS=darwin;
     fi
 script:
   - npm i
