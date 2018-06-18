@@ -51,6 +51,13 @@ if (availablePort === port) {
 }
 ```
 
+## API
+
+### detectPort(port, address = '')
+
+- port Integer. the port to be detected.
+- address String. Specific the address to detect, default to "*".
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/fibjs-modules/detect-port/issues).

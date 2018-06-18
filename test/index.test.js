@@ -1,5 +1,5 @@
 const test = require("test");
-const http = require("http");
+const TcpServer = require('net').TcpServer;
 const detectPort = require('../');
 
 test.setup();
@@ -10,9 +10,23 @@ describe('detectPort', () => {
   });
 
   it("random port", () => {
-    let svr = new http.Server(3000, () => { });
+    let svr = new TcpServer(3000, () => { });
     svr.run(() => {});
     assert.notEqual(detectPort(3000), 3000);
+    svr.stop();
+  });
+
+  it("same address", () => {
+    let svr = new TcpServer('127.0.0.1', 3000, () => { });
+    svr.run(() => {});
+    assert.notEqual(detectPort(3000, '127.0.0.1'), 3000);
+    svr.stop();
+  });
+
+  it("different address", () => {
+    let svr = new TcpServer('127.0.0.1', 3000, () => { });
+    svr.run(() => {});
+    assert.equal(detectPort(3000), 3000);
     svr.stop();
   });
 });
