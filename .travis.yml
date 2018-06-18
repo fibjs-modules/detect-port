@@ -38,7 +38,7 @@ matrix:
       env:
         - VERSION=0.25.0
 before_install:
-    - OS=linux
+  - OS=linux
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       rvm install ruby-2.4.0;
       rvm --default use 2.4.0;
