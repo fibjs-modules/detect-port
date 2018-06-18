@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require("test");
 const TcpServer = require('net').TcpServer;
 const detectPort = require('../');
