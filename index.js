@@ -1,18 +1,17 @@
 'use strict';
 
-const TcpServer = require('net').TcpServer;
+const Socket = require('net').Socket;
 
 module.exports = function detectPort(port, address = '') {
   let svr;
+  svr = new Socket();
   try {
-    svr = new TcpServer(address, port, () => { });
-    svr.run(() => {});
+    svr.bind(address, port);
   } catch (error) {
-    svr = new TcpServer(address, 0, () => { });
-    svr.run(() => {});
+    svr.bind(address, 0);
   } finally {
-    port = svr.socket.localPort;
-    svr.stop();
+    port = svr.localPort;
+    svr.close();
     return port;
   }
 };
