@@ -1,7 +1,7 @@
 {
   "name": "@fibjs/detect-port",
   "description": "JavaScript Implementation of Port Detector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "Detector",
     "Port",
