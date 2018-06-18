@@ -2,46 +2,46 @@ language: node_js
 node_js: '6'
 matrix:
   include:
-    - os: linux
-      env:
-        - VERSION=0.3.1
-        - OS=linux
-    - os: linux
-      env:
-        - VERSION=0.4.1
-        - OS=linux
-    - os: linux
-      env:
-        - VERSION=0.16.0
-        - OS=linux
-    - os: linux
-      env:
-        - VERSION=0.24.0
-        - OS=linux
-    - os: linux
-      env:
-        - VERSION=0.25.0
-        - OS=linux
-    - os: osx
-      osx_image: xcode9
-      env:
-        - VERSION=0.3.1
-        - OS=darwin
-    - os: osx
-      osx_image: xcode9
-      env:
-        - VERSION=0.4.1
-        - OS=darwin
-    - os: osx
-      osx_image: xcode9
-      env:
-        - VERSION=0.16.0
-        - OS=darwin
-    - os: osx
-      osx_image: xcode9
-      env:
-        - VERSION=0.24.0
-        - OS=darwin
+    # - os: linux
+    #   env:
+    #     - VERSION=0.3.1
+    #     - OS=linux
+    # - os: linux
+    #   env:
+    #     - VERSION=0.4.1
+    #     - OS=linux
+    # - os: linux
+    #   env:
+    #     - VERSION=0.16.0
+    #     - OS=linux
+    # - os: linux
+    #   env:
+    #     - VERSION=0.24.0
+    #     - OS=linux
+    # - os: linux
+    #   env:
+    #     - VERSION=0.25.0
+    #     - OS=linux
+    # - os: osx
+    #   osx_image: xcode9
+    #   env:
+    #     - VERSION=0.3.1
+    #     - OS=darwin
+    # - os: osx
+    #   osx_image: xcode9
+    #   env:
+    #     - VERSION=0.4.1
+    #     - OS=darwin
+    # - os: osx
+    #   osx_image: xcode9
+    #   env:
+    #     - VERSION=0.16.0
+    #     - OS=darwin
+    # - os: osx
+    #   osx_image: xcode9
+    #   env:
+    #     - VERSION=0.24.0
+    #     - OS=darwin
     - os: osx
       osx_image: xcode9
       env:
